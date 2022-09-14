@@ -5,13 +5,13 @@
 그러지 못하고 데이터가 여러 블럭에 담겨야 할 때 그 데이터가 기록되는 가장 앞 부분의 블럭의 ```Type```에는 ```First(2)```가 표기되고       
 가장 마지막 블록은 ```Last(4)```가 표기된다.       
 그리고 그 중간에 담기는 모든 블럭들은 ```Middle(3)```로 표기된다.    
-<img src="https://drive.google.com/u/1/uc?id=1a3CGe1ejg3YMqi1gWraak-Ds5Smq_jeK&export=download" width="450" height="280">    
+<img src="https://drive.google.com/u/1/uc?id=1a3CGe1ejg3YMqi1gWraak-Ds5Smq_jeK&export=download" width="460" height="280">    
        
 
 # log::reader 파일    
 ```log::reader``` 파일에는   
 ```Reader``` 클래스와 몇 가지 함수가 있다.     
-<img src="https://drive.google.com/u/1/uc?id=130XpeAEnbznoVwrk4XDFd_ITVQ3xbOa9&export=download" width="450" height="280">    
+<img src="https://drive.google.com/u/1/uc?id=130XpeAEnbznoVwrk4XDFd_ITVQ3xbOa9&export=download" width="460" height="280">    
 나는 이 파일의 흐름을 살펴보고자 노력했다.    
    
    
@@ -37,9 +37,7 @@
  ```kBadRecord```의 경우 ```checksum```이 맞지 않거나 레코드의 길이가 0이거나 등     
  오류가 있어 물리 레코드에서 읽어오지 못한 경우 처리된다.
  ```모든 keyType에 해당되지 않는 경우```는 오류를 알린다.   
-![a-6](https://drive.google.com/u/1/uc?id=17F6Z497mPeQL10wIysbkTOfHDjMvLXRO&export=download)   
-
-
+<img src="https://drive.google.com/u/1/uc?id=17F6Z497mPeQL10wIysbkTOfHDjMvLXRO&export=download" width="600" height="400">   
 
 
 

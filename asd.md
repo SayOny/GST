@@ -20,18 +20,22 @@
 읽고자 하는 데이터가 여러 블록으로 나뉘어져 있을 경우 ```scratch```에 각 블럭의 데이터를 ```append```해주었다가 마지막 블럭을 만나면 한번에 ```record```에 준다.   
 ![a-3](https://drive.google.com/u/1/uc?id=15D2TVfq63DublNpUafLfYgozTvsw3PYS&export=download)  
 
-읽으려는 데이터가 몇 개의 블럭에 걸쳐 있는지 알기 위해서 ```switch```문에서는 각 블럭의 ```type```을 읽고 블럭을 더 읽을 것인지 판단하며 에러가 있으면 이또한 처리하게 된다.      
+읽으려는 데이터가 몇 개의 블럭에 걸쳐 있는지 알기 위해서 ```switch```문에서는 각 블럭의 ```type```을 읽고 블럭을 더 읽을 것인지 판단하며    
+에러가 있으면 이 또한 처리하는 과정이 있다.      
 ```kFullType```의 경우 데이터를 읽어 바로 ```record```에 준다음 ```true```를 반환하여 함수를 빠져나온다.   
-```kFirstType```의 경우 ```scratch```에 데이터를 ```append```한 후 ```in_fragmented_record``` 변수를 ```true```로 설정하여 뒤에 블럭이 더 있음을 알리는 역할을 한다.     
+```kFirstType```의 경우 ```scratch```에 데이터를 ```append```한 후        
+```in_fragmented_record``` 변수를 ```true```로 설정하여 뒤에 블럭이 더 있음을 알리는 역할을 한다.     
 ![a-4](https://drive.google.com/u/1/uc?id=1qKF-RIQCYMBK9gAsCba9gRrsqyFDg82k&export=download)   
 
 ```kMiddleType```의 경우 ```scratch```에 데이터를 ```append``` 해준다.     
-```kLastType```의 경우 ```scratch```에 데이터를 ```append``` 해준 후 여태 추가했던 데이터가 담겨있는 ```scratch```를 ```Slice``` 객체로 바꿔서 ```record```에 준다.   
+```kLastType```의 경우 ```scratch```에 데이터를 ```append``` 해준 후      
+여태 추가했던 데이터가 담겨있는 ```scratch```를 ```Slice``` 객체로 바꿔서 ```record```에 준다.   
 ```kEof```의 경우는 더이상 읽을 블럭이 없을 때이다.     
 ![a-5](https://drive.google.com/u/1/uc?id=1SJxx06tFJCeC2C-BtANahAJnC0sK7Tae&export=download)  
 
 
- ```kBadRecord```의 경우 ```checksum```이 맞지 않거나 레코드의 길이가 0이거나 등 오류가 있어 물리 레코드에서 읽어오지 못한 경우 처리된다.
+ ```kBadRecord```의 경우 ```checksum```이 맞지 않거나 레코드의 길이가 0이거나 등     
+ 오류가 있어 물리 레코드에서 읽어오지 못한 경우 처리된다.
  ```모든 keyType에 해당되지 않는 경우```는 오류를 알린다.   
 ![a-6](https://drive.google.com/u/1/uc?id=17F6Z497mPeQL10wIysbkTOfHDjMvLXRO&export=download)   
 

@@ -1,12 +1,12 @@
 # Log format 
 로그의 구조는 32KB 크기의 블럭의 시퀀스로 되어있다. 한 블럭 안에는 Checksum(4bytes), Length(2bytes), Type(1byte), Data 부분으로 나뉘어져 있다. 쓰고자 하는 데이터의 크기가 한 블럭에 담긴다면 Type 부분에 Full(1)이 표기되겠지만, 그러지 못하고 데이터가 여러 블럭에 담겨야 할 때 그 데이터가 기록되는 가장 앞 부분의 블럭의 Type에는 First(2)가 표기되고 가장 마지막 블록은 Last(4)가 표기된다. 그리고 그 중간에 담기는 모든 블럭들은 Middle(3)로 표기된다.    
-![a-1](https://drive.google.com/u/1/uc?id=1a3CGe1ejg3YMqi1gWraak-Ds5Smq_jeK&export=download).  
+![a-1](https://drive.google.com/u/1/uc?id=1a3CGe1ejg3YMqi1gWraak-Ds5Smq_jeK&export=download)   
        
 
 # log::reader 파일    
 log::reader 파일에는  
 Reader 클래스와 몇 가지 함수가 있다.    
-![a-2](https://drive.google.com/u/1/uc?id=130XpeAEnbznoVwrk4XDFd_ITVQ3xbOa9&export=download).  
+![a-2](https://drive.google.com/u/1/uc?id=130XpeAEnbznoVwrk4XDFd_ITVQ3xbOa9&export=download)   
 
 나는 이 파일의 흐름을 살펴보고자 노력했다.   
    

@@ -37,7 +37,9 @@
  ```kBadRecord```의 경우 ```checksum```이 맞지 않거나 레코드의 길이가 0이거나 등     
  오류가 있어 물리 레코드에서 읽어오지 못한 경우 처리된다.
  ```모든 keyType에 해당되지 않는 경우```는 오류를 알린다.   
-<img src="https://drive.google.com/u/1/uc?id=17F6Z497mPeQL10wIysbkTOfHDjMvLXRO&export=download" width="600" height="400">   
+![a-6](https://drive.google.com/u/1/uc?id=17F6Z497mPeQL10wIysbkTOfHDjMvLXRO&export=download)   
+
+
 
 
 

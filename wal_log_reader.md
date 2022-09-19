@@ -14,11 +14,13 @@
 <img src="https://drive.google.com/u/1/uc?id=1n0iBamRTZTfV4Nj-i2GqJ0paLpNYuQ8L&export=download">    
 나는 이 파일의 흐름을 살펴보고자 노력했다.    
    
-![a-6]( https://drive.google.com/u/1/uc?id=1N1oAHp6YkIYa1PRyroQTO3sgXTiDnDQC&export=download) 
+![a-6]( https://drive.google.com/u/1/uc?id=14NWw8RAqeUYsQvzb2AxUMACrfSjdEzSN&export=download) 
    
 ```ReadRecord()``` 함수가 실행되면 이니셜 블록의 위치를 찾은 후 ```while```문을 돌면서 읽고자 하는 데이터를 읽는다.  
 ```ReadRecord()``` 함수의 매개변수로는 ```record```와 ```scratch```를 받는데,      
 읽고자 하는 데이터가 여러 블록으로 나뉘어져 있을 경우 ```scratch```에 각 블럭의 데이터를 ```append```해주었다가 마지막 블럭을 만나면 한번에 ```record```에 준다.   
+
+![a-6]( https://drive.google.com/u/1/uc?id=1OH37ofybb-_cghK5a_gu4Ten8XQTOQpt&export=download) 
 
 읽으려는 데이터가 몇 개의 블럭에 걸쳐 있는지 알기 위해서 ```switch```문에서는 각 블럭의 ```type```을 읽고 블럭을 더 읽을 것인지 판단하며    
 에러가 있으면 이 또한 처리하는 과정이 있다.      
@@ -30,7 +32,6 @@
 ```kLastType```의 경우 ```scratch```에 데이터를 ```append``` 해준 후      
 여태 추가했던 데이터가 담겨있는 ```scratch```를 ```Slice``` 객체로 바꿔서 ```record```에 준다.   
 ```kEof```의 경우는 더이상 읽을 블럭이 없을 때이다.     
-
 
  ```kBadRecord```의 경우 ```checksum```이 맞지 않거나 레코드의 길이가 0이거나 등     
  오류가 있어 물리 레코드에서 읽어오지 못한 경우 처리된다.

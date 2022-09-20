@@ -60,10 +60,10 @@ while문을 도는 동안에는 `record_type`이라는 정수형 변수에 `Read
 `kLastType`의 경우 `scratch`에 데이터를 `append` 해준 후       
 여태 추가했던 데이터가 담겨있는 `scratch`를 `Slice` 객체로 바꿔서 `record`에 준다.   
 마찬가지로 `in_fragmented_record`가 false라면 핸들링 해준다.     
-<br/>
+<br/> 
 `kEof`의 경우는 더이상 읽을 블럭이 없을 때이다.    
 그러므로 false를 반환하여 그대로 함수를 마친다.    
-<br/>
+<br/>   
  `kBadRecord`의 경우 `checksum`이 맞지 않거나 레코드의 길이가 0이거나 등     
  오류가 있어 물리 레코드에서 읽어오지 못한 경우에 처리된다.   
 <br/>

@@ -1,4 +1,4 @@
-# Log format 로그의 형식
+# Log Format 로그의 형식
 <br/>
 로그의 구조는 32KB 크기의 블럭의 시퀀스로 되어있다.     
 한 블럭 안에는 `Checksum(4bytes), Length(2bytes), Type(1byte), Data` 부분으로 나뉘어져 있다.      
@@ -15,7 +15,8 @@
 <br/>
 <hr/>
 <br/>
-# log::reader 파일    
+# log::reader 파일  
+<br/>  
 `log::reader` 파일에는   
 `Reader` 클래스와 몇 가지 함수가 있다.    
 <br/> 

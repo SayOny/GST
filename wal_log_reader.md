@@ -91,7 +91,7 @@ SkipToInitialBlock()함수는 이니셜 블록의 위치가 있는 곳까지 오
 
 4. `kLastType`의 경우 `scratch`에 데이터를 `append` 해준 후       
 여태 추가했던 데이터가 담겨있는 `scratch`를 `Slice` 객체로 바꿔서 `record`에 준다.   
-마찬가지로 `in_fragmented_record`가 false라면 핸들링 해준다.     
+마찬가지로 `in_fragmented_record`가 `false`라면 핸들링 해준다.     
 
 
 

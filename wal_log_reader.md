@@ -5,7 +5,7 @@
 쓰고자 하는 데이터의 크기가 한 블럭에 담긴다면 ```Type``` 부분에 ```Full(1)```이 표기되겠지만,       
 그러지 못하고 데이터가 여러 블럭에 담겨야 할 때 그 데이터가 기록되는 가장 앞 부분의 블럭의 ```Type```에는 ```First(2)```가 표기되고       
 가장 마지막 블록은 ```Last(4)```가 표기된다.       
-그리고 그 중간에 담기는 모든 블럭들은 ```Middle(3)```로 표기된다. 
+그리고 그 중간에 담기는 모든 블럭들은 ```Middle(3)```로 표기된다.    
 <br/>   
 <img src="https://drive.google.com/u/1/uc?id=1E_j12nGBrGLoZ5Ze--pg9UoPFvqgJ26s&export=download">    
 
@@ -17,10 +17,11 @@
 ```log::reader``` 파일에는   
 ```Reader``` 클래스와 몇 가지 함수가 있다.    
 <br/> 
-<img src="https://drive.google.com/u/1/uc?id=1n0iBamRTZTfV4Nj-i2GqJ0paLpNYuQ8L&export=download">    
+<img src="https://drive.google.com/u/1/uc?id=1n0iBamRTZTfV4Nj-i2GqJ0paLpNYuQ8L&export=download">     
+<br/>  
 나는 이 파일의 흐름을 살펴보고자 노력했다.    
 <br/>
-![a-6]( https://drive.google.com/u/1/uc?id=14NWw8RAqeUYsQvzb2AxUMACrfSjdEzSN&export=download) 
+![a-6]( https://drive.google.com/u/1/uc?id=14NWw8RAqeUYsQvzb2AxUMACrfSjdEzSN&export=download)    
 <br/>
 ```ReadRecord()``` 함수가 실행되면 이니셜 블록의 위치를 찾은 후 ```while```문을 돌면서 읽고자 하는 데이터를 읽는다.  
 ```ReadRecord()``` 함수의 매개변수로는 ```record```와 ```scratch```를 받는데,      

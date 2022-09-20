@@ -106,6 +106,10 @@ SkipToInitialBlock()함수는 이니셜 블록의 위치가 있는 곳까지 오
 
 
 
+
+
+
+
 지금까지 Log format를 살펴보고 log::reader파일을      
 `bool Reader::ReadRecord(Slice* record, std::string* scratch)` 함수를 중심으로 보았다.       
 

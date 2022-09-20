@@ -9,8 +9,7 @@
 가장 마지막 블록은 `Last(4)`가 표기된다.       
 그리고 그 중간에 담기는 모든 블럭들은 `Middle(3)`로 표기된다.   
 `data` 부분에는 데이터가 쓰인다.
-  
-<br/>      
+     
 <br/>   
 <img src="https://drive.google.com/u/1/uc?id=1E_j12nGBrGLoZ5Ze--pg9UoPFvqgJ26s&export=download">    
 

@@ -34,8 +34,7 @@ SkipToInitialBlock()함수는 이니셜 블록의 위치가 있는 곳까지 오
 while문을 도는 동안에는 ```record_type```이라는 정수형 변수에 ```ReadPhysicalRecord()```함수의 리턴 값을 받는다. 이 함수는 위에서 언급했듯이 record의 ```type```을 읽고 그를 반환하거나 에러가 있으면 그 에러를 알려준다. 그래서 ```type```의 종류가 조금 늘었는데, ```kEof, kBadRecord```가 그것이다. 
 
 <br/>
-![a-4]( https://drive.google.com/u/1/uc?id=1OH37ofybb-_cghK5a_gu4Ten8XQTOQpt&export=download)   
-
+![a-4]( https://drive.google.com/u/1/uc?id=1OH37ofybb-_cghK5a_gu4Ten8XQTOQpt&export=download)    
 <br/>
 <br/>
 

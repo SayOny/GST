@@ -41,10 +41,10 @@
 
 
 - `ReadRecord()` 함수가 실행되면 먼저 이니셜 블록의 위치를 찾는데   
-SkipToInitialBlock()함수는 이니셜 블록의 위치가 있는 곳까지 오프셋을 옮긴다.   
+`SkipToInitialBlock()`함수는 이니셜 블록의 위치가 있는 곳까지 오프셋을 옮긴다.   
 - 이후 `while`문을 돌면서 읽고자 하는 데이터를 읽게 된다.    
-- while문을 도는 동안에는 `record_type`이라는 정수형 변수에 `ReadPhysicalRecord()`함수의 리턴 값을 받는다.     
-- 이 함수는 위에서 언급했듯이 record의 `type`을 읽고 그를 반환하거나 에러가 있으면 그 에러를 알려준다. 그래서 `type`의 종류가 조금 늘었는데,     
+- `while`문을 도는 동안에는 `record_type`이라는 정수형 변수에 `ReadPhysicalRecord()`함수의 리턴 값을 받는다.     
+- 이 함수는 위에서 언급했듯이 `record`의 `type`을 읽고 그를 반환하거나 에러가 있으면 그 에러를 알려준다. 그래서 `type`의 종류가 조금 늘었는데,     
 `kEof, kBadRecord`가 그것이다. 
 
 
@@ -70,7 +70,7 @@ SkipToInitialBlock()함수는 이니셜 블록의 위치가 있는 곳까지 오
 
 
 - 또한 `in_fragmented_record`라는 변수가 있는데,    
-이 변수는 읽고자 하는 블럭이 여러 개로 나뉘어져 있는지 판단할 때 사용하며 기본값은 false이다.   
+이 변수는 읽고자 하는 블럭이 여러 개로 나뉘어져 있는지 판단할 때 사용하며 기본값은 `false`이다.   
 
 
 
@@ -80,12 +80,12 @@ SkipToInitialBlock()함수는 이니셜 블록의 위치가 있는 곳까지 오
 
 2. `kFirstType`의 경우 `scratch`에 데이터를 `append`한 후        
 `in_fragmented_record` 변수를 `true`로 설정하여 뒤에 블럭이 더 있음을 알리는 역할을 하게끔 만든다.      
-여기서는 `in_fragmented_record`가 false여야 정상이므로 그렇지 않다면 Report해준다.   
+여기서는 `in_fragmented_record`가 `false`여야 정상이므로 그렇지 않다면 에러를 Report해준다.   
 
 
 
 3. `kMiddleType`의 경우 `scratch`에 데이터를 `append` 해준다.     
-여기서는 `in_fragmented_record`가 false라면 핸들링 해준다.     
+여기서는 `in_fragmented_record`가 `false`라면 핸들링 해준다.     
 
 
 

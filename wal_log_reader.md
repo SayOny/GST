@@ -32,7 +32,7 @@
 
 
   
-나는 이 `bool Reader::ReadRecord(Slice* record, std::string* scratch)` 함수를 중심으로 이 파일의 흐름을 살펴보고자 했다.    
+나는 이 중 `bool Reader::ReadRecord(Slice* record, std::string* scratch)` 함수를 중심으로 이 파일의 흐름을 살펴보고자 했다.    
 
 
 

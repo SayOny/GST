@@ -1,5 +1,4 @@
 # Log format 로그의 형식
-
 로그의 구조는 32KB 크기의 블럭의 시퀀스로 되어있다.   
 한 블럭 안에는 `Checksum(4bytes), Length(2bytes), Type(1byte), Data` 부분으로 나뉘어져 있다.      
 `checksum`은 데이터의 손상을 확인할 때 사용한다.
@@ -16,8 +15,7 @@
 <br/>
 # log::reader 파일    
 `log::reader` 파일에는   
-`Reader` 클래스와 몇 가지 함수가 있다.    
-<br/>
+`Reader` 클래스와 몇 가지 함수가 있다.   
 <img src="https://drive.google.com/u/1/uc?id=1n0iBamRTZTfV4Nj-i2GqJ0paLpNYuQ8L&export=download">     
 <br/>
 나는 이 `bool Reader::ReadRecord(Slice* record, std::string* scratch)` 함수를 중심으로 이 파일의 흐름을 살펴보고자 했다.    

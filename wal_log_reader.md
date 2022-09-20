@@ -1,6 +1,6 @@
 # Log format 로그의 형식
-<br/>
-로그의 구조는 32KB 크기의 블럭의 시퀀스로 되어있다.     
+
+로그의 구조는 32KB 크기의 블럭의 시퀀스로 되어있다.        
 한 블럭 안에는 `Checksum(4bytes), Length(2bytes), Type(1byte), Data` 부분으로 나뉘어져 있다.      
 `checksum`은 데이터의 손상을 확인할 때 사용한다.
 `length`는 데이터의 길이를 말한다.
